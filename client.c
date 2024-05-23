@@ -39,6 +39,8 @@ void	check_pid(char *pid)
 	size_t	pid_len;
 
 	pid_len = 0;
+	if (ft_atoi(pid) < 0)
+		exit(0);
 	ft_intlen(ft_atoi(pid), &pid_len);
 	if (ft_strlen(pid) != pid_len)
 		(ft_printf("ERROR : this PID is not valid.\n"), exit(1));
